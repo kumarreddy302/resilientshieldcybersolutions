@@ -62,19 +62,29 @@ header {
 nav.fixed-header {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 20px;
     z-index: 1000;
-    width: 100%;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 0 50px 0 0;
     display: flex;
     gap: 15px;
     margin: 0;
@@ -99,7 +109,7 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 59px;
 }
 
 .menu-icon .bar {
@@ -114,11 +124,15 @@ nav ul li a:hover {
     nav ul {
         flex-direction: column;
         position: absolute;
-        top: 50px;
+        top: 60px;
         right: 10px;
         background-color: rgba(0, 0, 0, 0.8);
         width: 200px;
         display: none;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     nav ul li {
